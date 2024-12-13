@@ -10,7 +10,6 @@ const Challenge = ({ title, description, level, category, id }) => {
             <p className={classes.description}>{description}</p>
             <div className={classes.meta}>
                 <span className={classes.level}>Level: {level}</span>
-                <span className={classes.category}>Category: {category}</span>
             </div>
             {/* استخدم id لعمل رابط للتحدي */}
             <Link to={`/challenges/${id}`} className={classes.startBtn}>

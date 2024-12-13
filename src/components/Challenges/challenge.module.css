@@ -1,12 +1,8 @@
 :root {
-    --primary-color: #5dade2d1;
-    /* Light Blue */
+    --primary-color: #5dade2;
     --secondary-color: #f39c12;
-    /* Calm Orange */
     --bg-color: #ecf0f1;
-    /* Light Background */
     --text-color: #405971;
-    /* Dark but Soft Text Color */
     --transition-speed: 0.3s;
 }
 
@@ -14,137 +10,117 @@ body {
     background-color: var(--bg-color);
     margin: 0;
     font-family: 'Arial', sans-serif;
-    /* Clean font for the body */
 }
 
 /* Challenge Card Styles */
 .challengeCard {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     text-align: center;
-    margin-bottom: 20px;
-    width: 400px;
-    width: 100%;
+    margin: 1.5rem auto;
+    width: 90%;
+    max-width: 400px;
+    height: 330px;
     overflow: hidden;
-    margin: 20px auto;
-    height: 250px;
 }
 
 .challengeCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Title Styles */
 .title {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     color: var(--primary-color);
-    margin-bottom: 10px;
-    font-weight: 600;
-    /* Bolder title for emphasis */
+    font-weight: bold;
+    margin-bottom: 0.75rem;
 }
 
 /* Description Styles */
 .description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.5;
-    /* Improve readability */
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 /* Meta Information Styles */
 .meta {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    font-size: 1rem;
+    justify-content:center;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Level Badge Styles */
-.level,
-.category {
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    /* Slightly reduced font size for better fit */
+/* Badge Styles */
+.level, .category {
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #fff;
 }
 
 .level {
-    background-color: var(--secondary-color);
-    color: #fff;
+    background: var(--secondary-color);
 }
 
 .category {
-    background-color: var(--primary-color);
-    color: #fff;
+    background: var(--primary-color);
 }
 
 /* Start Button Styles */
 .startBtn {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     color: #fff;
-    padding: 10px 30px;
+    padding: 0.6rem 2rem;
     border: none;
-    border-radius: 50px;
-    font-size: 1.2rem;
+    border-radius: 25px;
+    font-size: 1rem;
     transition: background var(--transition-speed);
     cursor: pointer;
-    margin-top: 20px;
-    /* Spacing above the button */
     text-decoration: none;
-    /* Remove underline if it's a link */
 }
 
 .startBtn:hover {
-    background-color: #3498db;
-    /* Lighter blue on hover */
+    background: #3498db;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
     .challengeCard {
-        padding: 15px;
-        /* Reduce padding on smaller screens */
+        padding: 1rem;
     }
 
     .title {
         font-size: 1.5rem;
-        /* Adjust title size */
     }
 
     .description {
-        font-size: 1rem;
-        /* Adjust description size */
+        font-size: 0.9rem;
     }
 
     .startBtn {
-        padding: 8px 20px;
-        /* Adjust button padding */
-        font-size: 1rem;
-        /* Adjust button font size */
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .challengeCard {
-        margin-bottom: 15px;
-        /* Reduce margin on mobile */
+        margin-bottom: 1rem;
     }
 
     .meta {
         flex-direction: column;
-        /* Stack meta items on mobile */
         align-items: center;
-        /* Center align on mobile */
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .level {
-        margin-bottom: 10px;
-        /* Space between level and category */
+        margin-bottom: 0.5rem;
     }
 }

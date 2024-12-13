@@ -1,36 +1,32 @@
-/* home.module.css */
 :root {
-    --primary-color: #2980b9;
-    --secondary-color: #e74c3c;
-    --text-color: #d2dce6;
-    --bg-light: #ecf0f1;
-    --bg-dark: #34495e;
+    --primary-color: #0077b6; /* أزرق بحري */
+    --secondary-color: #fcbf49; /* أصفر برتقالي */
+    --bg-color: #f1f5f9; /* رمادي فاتح */
+    --bg-light: #e0f7fa; /* أزرق فاتح */
+    --bg-dark: #023e8a; /* أزرق غامق */
+    --text-color: #212529; /* رمادي داكن */
     --transition-speed: 0.3s;
 }
 
-* {
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
 /* Hero Section */
 .hero {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: #fff;
     padding: 100px 20px;
     text-align: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
-.heroTitle {
+.heroTitle, .hero h1 {
     color: #fff;
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -38,23 +34,17 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
 }
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
+.ctaTitle{
+    color: #e0f7fa;
 }
-
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 40px;
 }
-
 .ctaBtn {
     background-color: var(--secondary-color);
     color: #fff;
+    margin-top: 10px;
     padding: 15px 40px;
     text-transform: uppercase;
     border-radius: 50px;
@@ -63,18 +53,8 @@ body {
     text-decoration: none;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
-.ctaTitle{
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-
-}
-
 .ctaBtn:hover {
-    background-color: #c0392b;
+    background-color: #d97706;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -85,7 +65,6 @@ body {
     gap: 20px;
     padding: 50px 20px;
 }
-
 .feature {
     background-color: #fff;
     padding: 30px;
@@ -94,19 +73,11 @@ body {
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     text-align: center;
 }
-
 .feature h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: var(--primary-color);
 }
-
-.feature p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
 .feature a {
     color: var(--secondary-color);
     text-transform: uppercase;
@@ -115,14 +86,12 @@ body {
     text-decoration: none;
     transition: color var(--transition-speed);
 }
-
 .feature:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
-
 .feature a:hover {
-    color: #c0392b;
+    color: #d97706;
 }
 
 /* Call to Action Section */
@@ -133,17 +102,10 @@ body {
     text-align: center;
     clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
 }
-
 .cta h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-
-.cta p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
-
 .cta a {
     background-color: var(--secondary-color);
     padding: 15px 40px;
@@ -155,9 +117,8 @@ body {
     text-decoration: none;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 .cta a:hover {
-    background-color: #c0392b;
+    background-color: #d97706;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -166,11 +127,9 @@ body {
     .hero h1 {
         font-size: 2.5rem;
     }
-
     .cta h2 {
         font-size: 2rem;
     }
-
     .cta p {
         font-size: 1rem;
     }
